@@ -1,1 +1,4 @@
+#!/usr/bin/env bash
 
+read -p "Enter key name: " key
+aws ec2 import-key-pair --key-name "$key" --public-key-material fileb://~/.ssh/$key.pub
